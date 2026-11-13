@@ -1,0 +1,29 @@
+{
+  "name": "typescript-scaffold",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.5.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "tsc",
+    "test": "vitest run --coverage",
+    "prepare": "git config core.hooksPath .githooks || true"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "@vitest/coverage-v8": "^5.1.0",
+    "dependency-cruiser": "^18.7.2",
+    "eslint": "^10.14.0",
+    "prettier": "^3.10.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  }
+}
